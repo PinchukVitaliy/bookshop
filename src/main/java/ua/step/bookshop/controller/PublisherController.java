@@ -15,6 +15,6 @@ public class PublisherController {
 	@GetMapping("/publishies")
 	public String getGeneres(Model model) {
 		model.addAttribute("publishies", repos.findAll());
-		return "publishies";
+		return "publishiesView/publishies";
 	}
 }

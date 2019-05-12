@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Insert title here</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Publishies</h1>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col"></th>
+                <th scope="col"><a href="/create"><button class="btn btn-info">Create Publish</button></a></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="publish : ${publishies}">
+                <td  th:text="${publish.id}"></td>
+                <td  th:text="${publish.name}"></td>
+                <td><a  th:href="@{/edit(id=${publish.id})}" >Edit publish</a></td>
+                <td><a href="/delete/"+ >Delete publish</a></td>
+            </tr>
+            </tbody>
+        </table>
+</body>
+</html>

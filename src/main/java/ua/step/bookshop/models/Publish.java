@@ -10,6 +10,7 @@ public class Publish {
 	@Id
 	private Short id;
 	private String name;
+
 	public Short getId() {
 		return id;
 	}
