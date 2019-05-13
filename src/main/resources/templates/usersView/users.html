@@ -5,29 +5,33 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Genres</title>
+    <title>Users</title>
 </head>
 <body>
 <div class="container-fluid">
-    <h1>Genres</h1>
+    <h1>Users</h1>
     <p><b><a th:href="@{'/'}" >Default Page</a></b></p>
 <table class="table table-striped table-dark">
     <thead>
     <tr>
         <th scope="col">Id</th>
         <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
         <th scope="col"></th>
         <th scope="col"></th>
-        <th scope="col"><a href="/addGenre"><button class="btn btn-info">Create Genre</button></a></th>
+        <th scope="col"><a href="/addUser"><button class="btn btn-info">Create User</button></a></th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="genre : ${genres}">
-        <td  th:text="${genre.id}"></td>
-        <td  th:text="${genre.name}"></td>
-        <td><a  th:href="@{'/showGenre/'+${genre.id}}" >Info ganre</a></td>
-        <td><a  th:href="@{'/updateGenre/'+${genre.id}}" >Edit ganre</a></td>
-        <td><a  th:href="@{'/deleteGenre/'+${genre.id}}" >Delete ganre</a></td>
+    <tr th:each="user : ${users}">
+        <td  th:text="${user.id}"></td>
+        <td  th:text="${user.name}"></td>
+        <td  th:text="${user.email}"></td>
+        <td  th:text="${user.password}"></td>
+        <td><a  th:href="@{'/showUser/'+${user.id}}" >Info user</a></td>
+        <td><a  th:href="@{'/updateUser/'+${user.id}}" >Edit user</a></td>
+        <td><a  th:href="@{'/deleteUser/'+${user.id}}" >Delete user</a></td>
     </tr>
     </tbody>
 </table>

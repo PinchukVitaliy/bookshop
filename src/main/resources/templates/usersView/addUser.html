@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Create</title>
+</head>
+<body>
+<div class="container-fluid">
+<h1>Create User Page</h1>
+<form name="user" th:action="@{/addUser}" method="post">
+    <div class="form-group">
+        <label for="name1"><b>Name</b></label>
+        <input type="text" class="form-control" name="name" id="name1"  placeholder="Enter User Name">
+    </div>
+    <div class="form-group">
+        <label for="email1"><b>Email @</b></label>
+        <input type="email" class="form-control" name="email" id="email1"  placeholder="Enter User Email">
+    </div>
+    <div class="form-group">
+        <label for="password1"><b>Password</b></label>
+        <input type="password" class="form-control" name="password" id="password1"  placeholder="Enter User Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Save User</button>&nbsp;
+    <a href="/users"><input type="button" class="btn btn-success" value="Beck on Users List Page"/></a>
+</form>
+
+</div>
+</body>
+</html>

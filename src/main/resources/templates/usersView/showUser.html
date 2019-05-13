@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>User Edit</title>
+</head>
+<body>
+<div class="container-fluid">
+        <h1>Info User Page</h1>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Id</span>
+            </div>
+            <input type="text" class="form-control" th:field="*{user.id}" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Name</span>
+            </div>
+            <input type="text" class="form-control"  th:field="*{user.name}" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Email @</span>
+            </div>
+            <input type="text" class="form-control"  th:field="*{user.email}" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Password</span>
+            </div>
+            <input type="text" class="form-control"  th:field="*{user.password}" readonly>
+        </div>
+        <a href="/users"><input type="button" class="btn btn-success" value="Beck on Users List Page"/></a>
+</div>
+</body>
+</html>
