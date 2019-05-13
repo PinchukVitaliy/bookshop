@@ -42,7 +42,7 @@ public class GenreController {
 	}
 
 	@PostMapping("/updateGenre")
-	public String updateUser(@ModelAttribute("genre") Genre genre){
+	public String updateGenre(@ModelAttribute("genre") Genre genre){
 		Genre updateGenre = repos.getOne(genre.getId());
 		updateGenre.setName(genre.getName());
 		repos.save(updateGenre);

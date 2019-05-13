@@ -16,15 +16,17 @@
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col"></th>
-                <th scope="col"><a href="/create"><button class="btn btn-info">Create Publish</button></a></th>
+                <th scope="col"></th>
+                <th scope="col"><a href="/addPublish"><button class="btn btn-info">Create Publish</button></a></th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="publish : ${publishies}">
                 <td  th:text="${publish.id}"></td>
                 <td  th:text="${publish.name}"></td>
-                <td><a  th:href="@{/edit(id=${publish.id})}" >Edit publish</a></td>
-                <td><a href="/delete/"+ >Delete publish</a></td>
+                <td><a  th:href="@{'/showPublish/'+${publish.id}}" >Info publish</a></td>
+                <td><a  th:href="@{'/updatePublish/'+${publish.id}}" >Edit publish</a></td>
+                <td><a  th:href="@{'/deletePublish/'+${publish.id}}" >Delete publish</a></td>
             </tr>
             </tbody>
         </table>

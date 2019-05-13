@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Publish Edit</title>
+</head>
+<body>
+<div class="container-fluid">
+        <h1>Info Publish Page</h1>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Id</span>
+            </div>
+            <input type="text" class="form-control" th:field="*{publish.id}" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Name</span>
+            </div>
+            <input type="text" class="form-control"  th:field="*{publish.name}" readonly>
+        </div>
+        <a href="/publishies"><input type="button" class="btn btn-success" value="Beck on Publishies List Page"/></a>
+</div>
+</body>
+</html>

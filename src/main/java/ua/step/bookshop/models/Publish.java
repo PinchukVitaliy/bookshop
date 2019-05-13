@@ -1,6 +1,7 @@
 package ua.step.bookshop.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,8 +9,12 @@ import javax.persistence.Table;
 @Table(name = "publishies")
 public class Publish {
 	@Id
+	@GeneratedValue
 	private Short id;
 	private String name;
+
+	public Publish() {
+	}
 
 	public Short getId() {
 		return id;
